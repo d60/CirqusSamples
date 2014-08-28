@@ -34,14 +34,15 @@
   <ItemGroup>
     <Reference Include="d60.Cirqus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\d60.Cirqus.0.12.0\lib\NET45\d60.Cirqus.dll</HintPath>
+      <HintPath>..\packages\d60.Cirqus.0.12.1\lib\NET45\d60.Cirqus.dll</HintPath>
     </Reference>
     <Reference Include="d60.Cirqus.MongoDb, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\d60.Cirqus.MongoDb.0.12.0\lib\NET45\d60.Cirqus.MongoDb.dll</HintPath>
+      <HintPath>..\packages\d60.Cirqus.MongoDb.0.12.1\lib\NET45\d60.Cirqus.MongoDb.dll</HintPath>
     </Reference>
-    <Reference Include="d60.Cirqus.MsSql">
-      <HintPath>..\packages\d60.Cirqus.MsSql.0.12.0\lib\NET45\d60.Cirqus.MsSql.dll</HintPath>
+    <Reference Include="d60.Cirqus.MsSql, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\d60.Cirqus.MsSql.0.12.1\lib\NET45\d60.Cirqus.MsSql.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Bson">
       <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
@@ -75,6 +76,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\SlowView.cs" />
     <Compile Include="Views\TimeToCompletionView.cs" />
+    <Compile Include="Views\TimeToCompletionViewAdaptedForMsSql.cs" />
     <Compile Include="Views\ToDoomListView.cs" />
   </ItemGroup>
   <ItemGroup>

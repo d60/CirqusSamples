@@ -21,8 +21,8 @@ namespace ToDoomList
     {
         static void Main()
         {
-            var processor = GetCommandProcessorForMongoDb();
-            //var processor = GetCommandProcessorForMsSql();
+            //var processor = GetCommandProcessorForMongoDb();
+            var processor = GetCommandProcessorForMsSql();
 
             processor.Initialize();
 
@@ -91,7 +91,7 @@ namespace ToDoomList
 
             var syncEventDispatcher = new ViewManagerEventDispatcher(aggregateRootRepository,
                 new MsSqlViewManager<ToDoomListView>("mssql", "ToDoomListView"),
-                new MsSqlViewManager<TimeToCompletionView>("mssql", "TimeToCompletionView"));
+                new MsSqlViewManager<TimeToCompletionViewAdaptedForMsSql>("mssql", "TimeToCompletionView"));
 
             var asyncEventDispatcher = new ViewManagerEventDispatcher(aggregateRootRepository,
                 new MsSqlViewManager<SlowView>("mssql", "SlowViews"))

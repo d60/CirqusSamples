@@ -16,7 +16,9 @@ namespace ToDoomList.Views
             BulletAddedTime = new Dictionary<string, DateTime>();
             CompletionTimes = new Dictionary<string, TimeSpan>();
         }
+        
         public string Id { get; set; }
+        
         public long LastGlobalSequenceNumber { get; set; }
 
         public Dictionary<string, DateTime> BulletAddedTime { get; set; }
@@ -44,5 +46,4 @@ namespace ToDoomList.Views
             CompletionTimes[text] = timeToCompletion;
         }
     }
-
 }
