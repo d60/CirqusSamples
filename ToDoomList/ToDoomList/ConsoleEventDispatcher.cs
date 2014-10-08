@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using d60.Cirqus.Events;
+using d60.Cirqus.Views;
 
 namespace ToDoomList
 {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using d60.Cirqus.Extensions;
+using d60.Cirqus.MsSql.Views;
 using d60.Cirqus.Views.ViewManagers;
 using d60.Cirqus.Views.ViewManagers.Locators;
 using ToDoomList.Events;
@@ -21,8 +22,10 @@ namespace ToDoomList.Views
         
         public long LastGlobalSequenceNumber { get; set; }
 
+        [Json]
         public Dictionary<string, DateTime> BulletAddedTime { get; set; }
 
+        [Json]
         public Dictionary<string, TimeSpan> CompletionTimes { get; set; }
         
         public void Handle(IViewContext context, BulletAdded domainEvent)
