@@ -96,8 +96,8 @@ namespace ToDoomList
                 .EventStore(e => e.UseMongoDb(mongoConnectionString, "Events"))
                 .EventDispatcher(e =>
                 {
-                    e.UseViewManagerEventDispatcher(waitHandle, viewManagers);
-                    e.UseViewManagerEventDispatcher(waitHandle, new MongoDbViewManager<SlowView>(mongoConnectionString));
+                    e.UseViewManagerEventDispatcher(viewManagers).WithWaitHandle(waitHandle);
+                    e.UseViewManagerEventDispatcher(new MongoDbViewManager<SlowView>(mongoConnectionString)).WithWaitHandle(waitHandle);
                 })
                 .Create();
         }
@@ -115,8 +115,8 @@ namespace ToDoomList
                 .EventStore(e => e.UseSqlServer("mssql", "Events"))
                 .EventDispatcher(e =>
                 {
-                    e.UseViewManagerEventDispatcher(waitHandle, viewManagers);
-                    e.UseViewManagerEventDispatcher(waitHandle, new MsSqlViewManager<SlowView>("mssql"));
+                    e.UseViewManagerEventDispatcher(viewManagers).WithWaitHandle(waitHandle);
+                    e.UseViewManagerEventDispatcher(new MsSqlViewManager<SlowView>("mssql")).WithWaitHandle(waitHandle);
                 })
                 .Create();
         }

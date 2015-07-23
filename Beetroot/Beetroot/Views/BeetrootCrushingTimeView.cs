@@ -11,9 +11,16 @@ namespace Beetroot.Views
         ISubscribeTo<BeetrootCreated>, 
         ISubscribeTo<BeetrootCompletelyCrushed>
     {
+        static readonly DateTime AbsentSqlDateTime = new DateTime(1754,1,1);
         public string Id { get; set; }
 
         public long LastGlobalSequenceNumber { get; set; }
+
+        public BeetrootCrushingTimeView()
+        {
+            CreatedAt = AbsentSqlDateTime;
+            CompletelyCrushedAt = AbsentSqlDateTime;
+        }
 
         [NotNull]
         public DateTime CreatedAt { get; set; }
@@ -25,7 +32,7 @@ namespace Beetroot.Views
 
         public void Handle(IViewContext context, BeetrootCreated domainEvent)
         {
-            Username = domainEvent.Meta[AggregateRoots.Beetroot.UsernameMetadataKey].ToString();
+            Username = domainEvent.Meta[AggregateRoots.Beetroot.UsernameMetadataKey];
 
             CreatedAt = domainEvent.GetUtcTime();
         }

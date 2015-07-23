@@ -5,7 +5,7 @@ namespace ToDoomList.Commands
 {
     public class CreateToDoomList : Command<AggregateRoots.ToDoomList>
     {
-        public CreateToDoomList(Guid aggregateRootId, string title, string[] bulletTexts) : base(aggregateRootId)
+        public CreateToDoomList(Guid aggregateRootId, string title, string[] bulletTexts) : base(aggregateRootId.ToString())
         {
             Title = title;
             BulletTexts = bulletTexts;

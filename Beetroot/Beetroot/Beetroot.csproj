@@ -33,12 +33,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="d60.Cirqus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\d60.Cirqus.0.28.0\lib\NET45\d60.Cirqus.dll</HintPath>
-    </Reference>
-    <Reference Include="d60.Cirqus.MsSql, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\d60.Cirqus.MsSql.0.28.0\lib\NET45\d60.Cirqus.MsSql.dll</HintPath>
+      <HintPath>..\packages\d60.Cirqus.0.61.7\lib\NET45\d60.Cirqus.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

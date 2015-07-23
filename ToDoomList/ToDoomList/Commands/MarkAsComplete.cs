@@ -5,7 +5,7 @@ namespace ToDoomList.Commands
 {
     public class MarkAsComplete : Command<AggregateRoots.ToDoomList>
     {
-        public MarkAsComplete(Guid aggregateRootId, int bulletIndex) : base(aggregateRootId)
+        public MarkAsComplete(Guid aggregateRootId, int bulletIndex) : base(aggregateRootId.ToString())
         {
             BulletIndex = bulletIndex;
         }

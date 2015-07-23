@@ -5,7 +5,7 @@ namespace Beetroot.Commands
 {
     public class SqueezeCommand : Command<AggregateRoots.Beetroot>
     {
-        public SqueezeCommand(Guid aggregateRootId) : base(aggregateRootId)
+        public SqueezeCommand(Guid aggregateRootId) : base(aggregateRootId.ToString())
         {
         }
 

@@ -33,7 +33,6 @@ namespace Beetroot
             var commandProcessor = CommandProcessor.With()
                 .Logging(l => l.UseConsole(minLevel: Logger.Level.Warn))
                 .EventStore(e => e.UseSqlServer(ConnectionStringName, "Events", automaticallyCreateSchema: true))
-                .AggregateRootRepository(r => r.UseDefault())
                 .EventDispatcher(e =>
                 {
                     e.UseViewManagerEventDispatcher(beetrootCrushingTimeView);
